@@ -1,0 +1,129 @@
+.header{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    
+}
+.texthead {
+    font-family: Verdana sans-serif;
+    font-size: 5em;
+    display: block;
+    letter-spacing: -0.11em;
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: -0.1em 0px 0.07em #fd6d7e;
+    position: relative;
+    right:0;
+}
+
+.fon{
+    position: absolute;
+    top:0;
+    opacity: .2;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    
+}
+.sobor{
+    position: fixed;
+    height: inherit;
+    width: inherit;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    background-attachment: scroll;
+}
+.soborImg{
+    -webkit-mask-image: -webkit-linear-gradient(left,rgba(0,0,0,0) 10%,rgba(0,0,0,1) 20%,rgba(0,0,0,1) 80%,rgba(0,0,0,0) 90%);
+    height: 100%;
+    
+}
+.container:nth-child(odd){
+    background-color: aliceblue;
+   
+}
+.container:nth-child(even){
+    background-color:antiquewhite;
+}
+.container{
+    box-shadow: 0 0 20px rgba(0,0,0,1);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+.firstSymbol{
+    font-size: 2em;
+    color: red;
+    font-style: italic;
+}
+p{
+    text-indent: 4em;
+}
+.contImg{
+    max-height: 100%;
+    max-width: 100%;
+    outline: 3px solid black;
+    border:3px solid white;
+}
+.modalButton{
+    padding: 10px;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    z-index: 999;
+    position: absolute;
+    top: 200px;
+}
+#leftButton{
+    left:0;
+}
+#rightButton{
+    right:0;
+}
+#close{
+    top: 0;
+    right: 0;
+}
+.nd{
+    display: none;
+}
+#modalDiv{
+    display: inline-block;
+    padding: 50px;
+    z-index: 999;
+    background-color: #080808;
+    border: 2px solid white;
+    position: absolute;
+    text-align: center;
+     
+}
+#modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+#modalFon{
+    position: fixed;
+    background: #b5b4b5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    opacity: .7;
+}
+#modalImg{
+    max-height: 80vh;
+    max-width: 80vw;
+}
