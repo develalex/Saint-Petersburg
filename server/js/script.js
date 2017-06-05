@@ -1,5 +1,5 @@
 $(function (){
-    $(".contImg").click(imgClick);
+    $(".contImg").click(show);
     $("#close").click(closeClick);
     $('#leftButton').click(left);
     $('#rightButton').click(right);
@@ -7,10 +7,17 @@ $(function (){
     
 })
 function closeClick(){
-    $('#modal').addClass("nd");
+    $('#modal').fadeOut(1000,CloseModal); // Hide modal window
+}
+function CloseModal(){
+    //$('#modal').addClass("nd");
     $("#modalImg").attr('src','');
     $('.view').removeClass('view');
     
+}
+function show(e){
+    $('#modal').fadeIn(1000); // Animate show element
+    imgClick(e);
 }
 function imgClick(e){
     var ImgSrc=e.target.getAttribute("src");
@@ -21,14 +28,17 @@ function imgClick(e){
     $(p).attr('index',0);
 }
 function setModalImg(ImgSrc){
+    //$('#modal').fadeIn(1000); // Animate show element
     var winW = window.innerWidth;
     var winH = window.innerHeight;
     $("#modalImg").attr('src',ImgSrc);
-    $('#modal').removeClass("nd");
+    //$('#modal').removeClass("nd");
     var h=Math.round((winH - $('#modalDiv').outerHeight())/2);
     var w=Math.round((winW - $('#modalDiv').outerWidth())/2);
     $('#modalDiv').css('top',h);
     $('#modalDiv').css('left',w);
+    
+    
 }
 function left(e){
     var a=$('.view')[0];
